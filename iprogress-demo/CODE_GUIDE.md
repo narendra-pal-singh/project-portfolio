@@ -22,7 +22,7 @@ Due to confidentiality, this project structure contains mostly placeholder files
 - [`public/ng-app/app.js`](./public/ng-app/app.js)  
   Initializes AngularJS app and sets global configurations.
 
-- [`public/ng-app/ng-routes/ExamAI.js`](./public/ng-app/ng-routes/ExamAI.js)  
+- [`public/ng-app/ng-routes/admin-routes.js`](./public/ng-app/ng-routes/admin-routes.js)  
   Defines AngularJS routes related to AI-based exam and question modules.
 
 - [`public/ng-app/controllers/ExamAI.js`](./public/ng-app/controllers/ExamAI.js)  
