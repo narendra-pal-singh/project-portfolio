@@ -25,7 +25,7 @@ Due to confidentiality, this project structure contains mostly placeholder files
 - [`public/ng-app/ng-routes/admin-routes.js`](./public/ng-app/ng-routes/admin-routes.js)  
   Defines AngularJS routes related to AI-based exam and question modules.
 
-- [`public/ng-app/controller/ExamAI.js`](./public/ng-app/controller/ExamAI.js)  
+- [`public/ng-app/ng-controller/ExamAI.js`](./public/ng-app/ng-controller/ExamAI.js)  
   Manages front-end logic for question generation, exam attempts, and result tracking.
 
 ---
