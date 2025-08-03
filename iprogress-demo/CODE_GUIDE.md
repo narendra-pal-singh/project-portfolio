@@ -6,10 +6,10 @@ Due to confidentiality, this project structure contains mostly placeholder files
 
 ## ✅ Code Sample Files (Click to View)
 
-- [`app/controllers/ExamAIController.php`](./app/controllers/ExamAIController.php)  
+- [`app/Controllers/ExamAIController.php`](./app/Controllers/ExamAIController.php)  
   Handles question generation using ChatGPT API, practice/test exam creation, assessment calculation, and score saving.
 
-- [`app/models/ExamAIModel.php`](./app/models/ExamAIModel.php)  
+- [`app/Models/ExamAIModel.php`](./app/Models/ExamAIModel.php)  
   Manages questions, exams, student scores, and performance reports.
 
 - [`app/Config/Routes.php`](./app/Config/Routes.php)  
