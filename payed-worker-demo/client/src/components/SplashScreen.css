@@ -1,0 +1,109 @@
+
+/* The container */
+.lbl_container {
+    display: block;
+    position: relative;
+    padding-left:25px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 14px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    color: #7E8E9E;
+    font-weight: 500;
+    padding-top:2px;
+  }
+  .lbl_container >span{ color:#3F4DA3; font-weight:600; text-decoration:underline;border-radius: 4px;}
+  
+  /* Hide the browser's default checkbox */
+  .lbl_container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  /* Create a custom checkbox */
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+  }
+  
+  /* On mouse-over, add a grey background color */
+  .lbl_container:hover input ~ .checkmark {
+    background-color: #ccc;
+  }
+  
+  /* When the checkbox is checked, add a blue background */
+  .lbl_container input:checked ~ .checkmark {
+    background-color: #3F4DA3;
+    border-radius: 4px;
+  }
+  
+  /* Create the checkmark/indicator (hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the checkmark when checked */
+  .lbl_container input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  /* Style the checkmark/indicator */
+  .lbl_container .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 7px;
+    height: 13px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+  a:hover {color: #fff;}
+  
+  .home{ display:block;}
+  .earned_salary{ display:none;}
+  .verification{ display:none;}
+  .no_enterest{ display:none;}
+  .get_srtted{display:none;}
+  .otp_verification{ display:none;}
+  .set_pin{ display:none;}
+  .term_condition{ display:none;}
+  .select_language{ display:none;}
+  
+  .head_text_onboard{ margin-top:-15px; min-height:44px; margin-bottom: 15px;}
+  .onboard_img{ width:75%; padding-bottom:3%;}
+  .logo_bg_none{ padding-top:8%; padding-bottom:32px;}
+  .onboard_last_img{padding-bottom:2%;}
+  .nxt_cls{ margin-bottom:0px; font-size:14px; color:#5782D6; text-align: left; margin-top: 25px;}
+  .nxt_cls .next_span{float:right;} 
+  .nxt_cls span{ cursor:pointer;}
+  .head_textboard{ color:#7E8E9E; font-size:15px; font-weight:500; line-height:22px; margin-bottom:5px;}
+  .poweredBy{ margin-top: 30px;}
+  .head_textboard >span{ font-weight:600;}
+  .logo_wdth{ height: 80px;}
+  .get_srtted_row{ background-color:#5782D6;min-height: 100vh; align-items: center;}
+  .welcom_msg{ color:#fff; font-size:14px; padding-top:10px; margin-bottom:0px;}
+  .slide_screen{ position:relative;}
+  .slide_screen .slide_div{ position:fixed; z-index:999;top:470px; left:0;}
+  .slide_screen > .slide_div > span{ background-color: #DDE6F7;display: inline-block;width:10px;height:10px; border-radius:50px; cursor:pointer; margin-left: 5px;}
+  .slide_screen > .slide_div > span:hover{ border:2px solid #5782D6;}
+  .slide_screen > .slide_div > span.active{width:23px;background-color:#5782D6;}
+  .app_btn_continue{ width:60%; color:#5782D6; background-color:#fff; font-size:17px; margin-top:6%; padding:4px 0px; border-radius:5px;}
+  @media (max-width: 991px) { 
+  .onboard_last_img{width: 18%; padding-bottom:2%;}
+  .slide_screen .slide_div{ position:fixed; z-index:999;top: 417px;}
+  }
+  

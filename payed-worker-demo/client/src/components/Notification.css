@@ -1,0 +1,42 @@
+.notification > .mrgn_zero
+{
+    min-height: 100vh; align-items: center; margin: 0px;
+}
+
+.notification .input_div .form_input, .notification .form_input:focus {
+    width : 80%;
+    font-size : 14px;
+    border : #ccc solid 1px;
+    border-radius : 50px;
+    height : 33px;
+    text-align : left;
+    margin-bottom : 6%;
+    box-shadow : none !important ;
+    }
+
+.notification .search_bg {
+    background-image : url(../assets/images/search_icon.png);
+    background-repeat : no-repeat;
+    background-position : 94%;
+    }
+.notification    .mark_all {
+    font-size : 15px;
+    color : #5782D6;
+    text-align : right;
+    padding-top : 20px;
+    padding-bottom : 20px;
+    cursor : pointer;
+    }
+    .notification .spent_row p {
+    font-size : 12px;
+    color : #7E8E9E;
+    margin-bottom : 0;
+    }
+    .notification .spent_row > .col-lg-4 > p {
+    text-align : right;
+    }
+    .notification .spent_row > .divv8, .divv4 {
+    border-bottom : 1px solid #f0f0f0;
+    padding-bottom : 25px;
+    margin-bottom : 25px;
+    }

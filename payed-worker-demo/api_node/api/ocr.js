@@ -1,0 +1,2 @@
+ //#Optical Character Recognition (OCR)
+ //Karza's OCR technology is integrated into their solutions for verifying various identity and address proof documents, such as PAN cards, Aadhaar cards, driving licenses, and voter IDs. It extracts key information from these documents for authentication.

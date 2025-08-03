@@ -1,0 +1,14 @@
+.addHome{
+    bottom: 50px;
+    position: fixed;
+    margin-left: 24%;
+}
+
+.add_app_btn{
+    padding: 5px;
+    margin: 5px;
+}
+.add_app_btn{
+    display: none;
+}
+

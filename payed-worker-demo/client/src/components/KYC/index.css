@@ -1,0 +1,43 @@
+.uploadView{
+    margin:0 5px;
+    padding: 0;
+    max-width: 150px;
+    max-height: 150px;
+}
+.buutn_done{
+    background-color: #ddd;
+    color:#7E8E9E!important;
+    /* width:80%; font-size:17px; margin-bottom:5%; padding:4px 0px; position: relative; */
+}
+.buutn_done:hover{background-color: #ddd!important; color:#7E8E9E!important;}
+.buutn_done:focus{ box-shadow:none; outline:none; background-color:#ddd; color:#7E8E9E;}
+/* .buutn_done::after {
+    position: absolute;
+    right: 17px;
+    font-weight: bold;
+    color: green;
+    content: '\2713';
+    border: 2px solid green;
+    border-radius: 100px;
+    width: 22px;
+    height: 22px;
+    padding: 0px;
+    font-size: 14px;
+    top: 6px;
+} */
+
+/* .topBackBtn{
+    display: block !important;   
+} */
+
+.disabled-link {
+    pointer-events: none;
+  }
+  
+@media (max-width: 991px) {
+    .buutn_done::after {        
+        right: 16px;
+        top: 5px;
+    } 
+}
+

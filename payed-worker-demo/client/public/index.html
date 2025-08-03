@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1,maximum-scale=1,user-scalable=n" />
+    
+    <!-- <meta name="theme-color" content="#000000" /> -->
+    
+    <!-- <meta
+      name="description"
+      content="Web site created using create-react-app"
+    /> -->
+
+    <!-- <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" /> -->
+
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+
+ 
+    <title>Pay'ed</title>
+
+  </head>
+  
+  <body onLoad="init()">
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div class="container-fluid" id="root"></div>
+    <script>
+      let deferredPrompt;
+
+      if('serviceWorker' in navigator){
+
+        window.addEventListener('load', function(){
+
+          navigator.serviceWorker.register('./sw.js').then(function(registration){
+
+            console.log('ServiceWorker registration successful with scope',registration.scope);
+
+          }, function(err){
+
+            console.log('ServiceWorker registration failed:',err);
+
+          }).catch(function(err){
+
+            console.log('Error',err);
+
+          });
+        });
+
+      }else{
+        
+        console.log('service worker is not supported');
+
+      }
+
+    
+    
+
+    
+
+    function init(){
+
+      const btnAdd = document.querySelector('.add_app_btn');
+
+    window.addEventListener('beforeinstallprompt', function(e) {
+      // Prevent Chrome 67 and earlier from automatically showing the prompt
+      e.preventDefault();
+
+      btnAdd.style.display = 'block';
+
+      // Stash the event so it can be triggered later.
+      deferredPrompt = e;
+
+    });
+      
+      
+      //btnAdd.style.display = 'none';
+      // Installation must be done by a user gesture! Here, the button click
+      btnAdd.addEventListener('click', (e) => {
+        // hide our user interface that shows our A2HS button
+        btnAdd.style.display = 'none';
+        // Show the prompt
+        deferredPrompt.prompt();
+        // Wait for the user to respond to the prompt
+        deferredPrompt.userChoice
+          .then((choiceResult) => {
+            if (choiceResult.outcome === 'accepted') {
+              console.log('User accepted the A2HS prompt');
+            } else {
+              console.log('User dismissed the A2HS prompt');
+            }
+            deferredPrompt = null;
+          });
+      });
+    }
+    
+    </script>
+  </body>
+</html>
+<script>
+  const isInStandaloneMode = () =>
+      (window.matchMedia('(display-mode: standalone)').matches) || (window.navigator.standalone) || document.referrer.includes('android-app://');
+
+ if (isInStandaloneMode()) {
+    console.log("webapp is installed")
+}
+function isPwa() {
+    //return ["fullscreen", "standalone", "minimal-ui"].some(
+    return ["standalone"].some(
+        (displayMode) => window.matchMedia('(display-mode: ' + displayMode + ')').matches
+    );
+}
+
+if(isPwa() === true){
+  window.resizeTo(375, 712);
+}
+</script>
