@@ -6,13 +6,13 @@ Due to confidentiality, this project structure contains mostly placeholder files
 
 ## ✅ Code Sample Files (Click to View)
 
-- [`app/controllers/AdsController.php`](./app/controllers/AdsController.php)  
+- [`app/Controllers/AdsController.php`](./app/Controllers/AdsController.php)  
   Fetches ad campaigns and ad account data linked to Facebook pages using the Facebook Graph API.
 
-- [`app/controllers/LeadController.php`](./app/controllers/LeadController.php)  
+- [`app/Controllers/LeadController.php`](./app/Controllers/LeadController.php)  
   Retrieves leads from Facebook ad accounts and handles their processing and storage.
 
-- [`app/models/LeadModel.php`](./app/models/LeadModel.php)  
+- [`app/Models/LeadModel.php`](./app/Models/LeadModel.php)  
   Manages database interactions for leads, campaigns, and Facebook ad accounts.
 
 ---
